@@ -1,0 +1,67 @@
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #06255B;
+}
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.inner  {
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(3, 100px);
+  grid-template-areas: 'rhomb1 . . .' 'rhomb2 rhomb3 rhomb4 rhomb5' '. . rhomb6 .';
+  rotate: -45deg;
+  width: 430px;
+  margin: 0 auto;
+}
+
+.rhomb {
+  grid-area: rhomb;
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:nth-child(1) {
+    grid-area: rhomb1;
+  }
+
+  &:nth-child(2) {
+    grid-area: rhomb2;
+  }
+
+  &:nth-child(3) {
+    grid-area: rhomb3;
+  }
+
+  &:nth-child(4) {
+    grid-area: rhomb4;
+  }
+
+  &:nth-child(5) {
+    grid-area: rhomb5;
+  }
+
+  &:nth-child(6) {
+    grid-area: rhomb6;
+  }
+}
+
+.text {
+  rotate: 45deg;
+  outline: 1px dotted;
+}
